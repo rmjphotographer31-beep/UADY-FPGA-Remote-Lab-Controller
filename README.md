@@ -4,7 +4,6 @@
 
 A reproducible remote FPGA lab controller for routing student Verilog designs from a Windows GUI to Raspberry Pi orchestration, AI-assisted board classification, a Quartus/JTAG server, and physical **Terasic DE1-SoC** or **Terasic DE10-Agilex** boards.
 
-> This repository is the cleaned GitHub-ready form of the final internship build. Runtime logic is preserved from the supplied final archive. Public-repository packaging fixes a missing setup-helper module, removes deployment-specific addresses from legacy notes, adds reproducibility checks, and documents the complete system.
 
 ## What the system does
 
