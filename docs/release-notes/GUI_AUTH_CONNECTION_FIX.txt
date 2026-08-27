@@ -1,0 +1,29 @@
+UADY FPGA GUI AUTHENTICATED PI CONNECTION FIX
+
+This package changes the Windows GUI connection test to:
+
+1. Request:
+   http://<Pi-IP>:5050/status
+
+2. Send the Raspberry Pi API key using:
+   X-API-Key: <saved key>
+
+3. Treat success=true as the required successful connection result.
+
+A normal web browser request to http://<Pi-IP>:5050/ will still return HTTP 401
+because browsers do not automatically attach the custom API-key header. Use the
+GUI Test Pi button or an authenticated curl request instead.
+
+Windows start:
+  py -m pip install requests
+  py RUN_GUI.py
+
+GUI settings:
+  Pi NetBird IP: your Raspberry Pi NetBird address
+  Port: 5050
+  Pi API Key: value printed by raspberry_pi_ai_hat/PRINT_PI_API_KEY.py
+
+Expected controller log after pressing Test Pi:
+  GET /status HTTP/1.1" 200
+  GET /queue HTTP/1.1" 200
+  GET /boards HTTP/1.1" 200

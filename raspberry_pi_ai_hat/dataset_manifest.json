@@ -1,0 +1,425 @@
+{
+  "count": 10,
+  "projects": [
+    {
+      "project": "Test_1A",
+      "expected_board": "DE10-Agilex",
+      "verilog_file": "Agilex/Test_1A.v",
+      "qsf_file": "Agilex/Test_1A.qsf",
+      "top_module": "Test_1A",
+      "verilog_ports": [
+        {
+          "name": "sw0",
+          "dir": "input",
+          "width": 1
+        },
+        {
+          "name": "sw1",
+          "dir": "input",
+          "width": 1
+        },
+        {
+          "name": "button0",
+          "dir": "input",
+          "width": 1
+        },
+        {
+          "name": "button1",
+          "dir": "input",
+          "width": 1
+        },
+        {
+          "name": "led",
+          "dir": "output",
+          "width": 4
+        },
+        {
+          "name": "led_bracket",
+          "dir": "output",
+          "width": 4
+        }
+      ],
+      "qsf_family": "Agilex 7",
+      "qsf_device": "AGFB014R24B2E2V",
+      "qsf_board": "",
+      "qsf_target_count": 6,
+      "active_target_intersection": [
+        "sw0",
+        "sw1",
+        "button0",
+        "button1",
+        "led",
+        "led_bracket"
+      ]
+    },
+    {
+      "project": "Test_2A",
+      "expected_board": "DE10-Agilex",
+      "verilog_file": "Agilex/Test_2A.v",
+      "qsf_file": "Agilex/Test_2A.qsf",
+      "top_module": "Test_2A",
+      "verilog_ports": [
+        {
+          "name": "clk50",
+          "dir": "input",
+          "width": 1
+        },
+        {
+          "name": "button0",
+          "dir": "input",
+          "width": 1
+        },
+        {
+          "name": "sw0",
+          "dir": "input",
+          "width": 1
+        },
+        {
+          "name": "led",
+          "dir": "output",
+          "width": 4
+        },
+        {
+          "name": "led_bracket",
+          "dir": "output",
+          "width": 4
+        }
+      ],
+      "qsf_family": "Agilex 7",
+      "qsf_device": "AGFB014R24B2E2V",
+      "qsf_board": "",
+      "qsf_target_count": 5,
+      "active_target_intersection": [
+        "clk50",
+        "button0",
+        "sw0",
+        "led",
+        "led_bracket"
+      ]
+    },
+    {
+      "project": "Test_3A",
+      "expected_board": "DE10-Agilex",
+      "verilog_file": "Agilex/Test_3A.v",
+      "qsf_file": "Agilex/Test_3A.qsf",
+      "top_module": "Test_3A",
+      "verilog_ports": [
+        {
+          "name": "clk50",
+          "dir": "input",
+          "width": 1
+        },
+        {
+          "name": "button0",
+          "dir": "input",
+          "width": 1
+        },
+        {
+          "name": "button1",
+          "dir": "input",
+          "width": 1
+        },
+        {
+          "name": "led",
+          "dir": "output",
+          "width": 4
+        },
+        {
+          "name": "led_bracket",
+          "dir": "output",
+          "width": 4
+        }
+      ],
+      "qsf_family": "Agilex 7",
+      "qsf_device": "AGFB014R24B2E2V",
+      "qsf_board": "",
+      "qsf_target_count": 5,
+      "active_target_intersection": [
+        "clk50",
+        "button0",
+        "button1",
+        "led",
+        "led_bracket"
+      ]
+    },
+    {
+      "project": "Test_4A",
+      "expected_board": "DE10-Agilex",
+      "verilog_file": "Agilex/Test_4A.v",
+      "qsf_file": "Agilex/Test_4A.qsf",
+      "top_module": "Test_4A",
+      "verilog_ports": [
+        {
+          "name": "clk50",
+          "dir": "input",
+          "width": 1
+        },
+        {
+          "name": "button0",
+          "dir": "input",
+          "width": 1
+        },
+        {
+          "name": "led",
+          "dir": "output",
+          "width": 4
+        },
+        {
+          "name": "led_bracket",
+          "dir": "output",
+          "width": 4
+        }
+      ],
+      "qsf_family": "Agilex 7",
+      "qsf_device": "AGFB014R24B2E2V",
+      "qsf_board": "",
+      "qsf_target_count": 4,
+      "active_target_intersection": [
+        "clk50",
+        "button0",
+        "led",
+        "led_bracket"
+      ]
+    },
+    {
+      "project": "EasyCode1",
+      "expected_board": "DE1-SoC",
+      "verilog_file": "DE1-SoC/EasyCode1.v",
+      "qsf_file": "DE1-SoC/EasyCode1.qsf",
+      "top_module": "EasyCode1",
+      "verilog_ports": [
+        {
+          "name": "SW",
+          "dir": "input",
+          "width": 10
+        },
+        {
+          "name": "LEDR",
+          "dir": "output",
+          "width": 10
+        }
+      ],
+      "qsf_family": "Cyclone V",
+      "qsf_device": "5CSEMA5F31C6",
+      "qsf_board": "DE1-SoC Board",
+      "qsf_target_count": 121,
+      "active_target_intersection": [
+        "SW",
+        "LEDR"
+      ]
+    },
+    {
+      "project": "EasyCode2",
+      "expected_board": "DE1-SoC",
+      "verilog_file": "DE1-SoC/EasyCode2.v",
+      "qsf_file": "DE1-SoC/EasyCode2.qsf",
+      "top_module": "EasyCode2",
+      "verilog_ports": [
+        {
+          "name": "KEY",
+          "dir": "input",
+          "width": 4
+        },
+        {
+          "name": "LEDR",
+          "dir": "output",
+          "width": 10
+        }
+      ],
+      "qsf_family": "Cyclone V",
+      "qsf_device": "5CSEMA5F31C6",
+      "qsf_board": "DE1-SoC Board",
+      "qsf_target_count": 68,
+      "active_target_intersection": [
+        "KEY",
+        "LEDR"
+      ]
+    },
+    {
+      "project": "HardCode1",
+      "expected_board": "DE1-SoC",
+      "verilog_file": "DE1-SoC/HardCode1.v",
+      "qsf_file": "DE1-SoC/HardCode1.qsf",
+      "top_module": "HardCode1",
+      "verilog_ports": [
+        {
+          "name": "SW",
+          "dir": "input",
+          "width": 10
+        },
+        {
+          "name": "KEY",
+          "dir": "input",
+          "width": 4
+        },
+        {
+          "name": "LEDR",
+          "dir": "output",
+          "width": 10
+        },
+        {
+          "name": "HEX0",
+          "dir": "output",
+          "width": 7
+        },
+        {
+          "name": "HEX1",
+          "dir": "output",
+          "width": 7
+        },
+        {
+          "name": "HEX2",
+          "dir": "output",
+          "width": 7
+        },
+        {
+          "name": "HEX3",
+          "dir": "output",
+          "width": 7
+        },
+        {
+          "name": "HEX4",
+          "dir": "output",
+          "width": 7
+        },
+        {
+          "name": "HEX5",
+          "dir": "output",
+          "width": 7
+        }
+      ],
+      "qsf_family": "Cyclone V",
+      "qsf_device": "5CSEMA5F31C6",
+      "qsf_board": "DE1-SoC Board",
+      "qsf_target_count": 121,
+      "active_target_intersection": [
+        "SW",
+        "KEY",
+        "LEDR",
+        "HEX0",
+        "HEX1",
+        "HEX2",
+        "HEX3",
+        "HEX4",
+        "HEX5"
+      ]
+    },
+    {
+      "project": "HardCode2",
+      "expected_board": "DE1-SoC",
+      "verilog_file": "DE1-SoC/HardCode2.v",
+      "qsf_file": "DE1-SoC/HardCode2.qsf",
+      "top_module": "HardCode2",
+      "verilog_ports": [
+        {
+          "name": "CLOCK_50",
+          "dir": "input",
+          "width": 1
+        },
+        {
+          "name": "SW",
+          "dir": "input",
+          "width": 10
+        },
+        {
+          "name": "KEY",
+          "dir": "input",
+          "width": 4
+        },
+        {
+          "name": "LEDR",
+          "dir": "output",
+          "width": 10
+        },
+        {
+          "name": "HEX0",
+          "dir": "output",
+          "width": 7
+        },
+        {
+          "name": "GPIO_0",
+          "dir": "output",
+          "width": 36
+        }
+      ],
+      "qsf_family": "Cyclone V",
+      "qsf_device": "5CSEMA5F31C6",
+      "qsf_board": "DE1-SoC Board",
+      "qsf_target_count": 121,
+      "active_target_intersection": [
+        "CLOCK_50",
+        "SW",
+        "KEY",
+        "LEDR",
+        "HEX0",
+        "GPIO_0"
+      ]
+    },
+    {
+      "project": "MediumCode1",
+      "expected_board": "DE1-SoC",
+      "verilog_file": "DE1-SoC/MediumCode1.v",
+      "qsf_file": "DE1-SoC/MediumCode1.qsf",
+      "top_module": "MediumCode1",
+      "verilog_ports": [
+        {
+          "name": "SW",
+          "dir": "input",
+          "width": 4
+        },
+        {
+          "name": "HEX0",
+          "dir": "output",
+          "width": 7
+        },
+        {
+          "name": "LEDR",
+          "dir": "output",
+          "width": 10
+        }
+      ],
+      "qsf_family": "Cyclone V",
+      "qsf_device": "5CSEMA5F31C6",
+      "qsf_board": "DE1-SoC Board",
+      "qsf_target_count": 121,
+      "active_target_intersection": [
+        "SW",
+        "HEX0",
+        "LEDR"
+      ]
+    },
+    {
+      "project": "MediumCode2",
+      "expected_board": "DE1-SoC",
+      "verilog_file": "DE1-SoC/MediumCode2.v",
+      "qsf_file": "DE1-SoC/MediumCode2.qsf",
+      "top_module": "MediumCode2",
+      "verilog_ports": [
+        {
+          "name": "CLOCK_50",
+          "dir": "input",
+          "width": 1
+        },
+        {
+          "name": "KEY",
+          "dir": "input",
+          "width": 4
+        },
+        {
+          "name": "LEDR",
+          "dir": "output",
+          "width": 10
+        }
+      ],
+      "qsf_family": "Cyclone V",
+      "qsf_device": "5CSEMA5F31C6",
+      "qsf_board": "DE1-SoC Board",
+      "qsf_target_count": 121,
+      "active_target_intersection": [
+        "CLOCK_50",
+        "KEY",
+        "LEDR"
+      ]
+    }
+  ]
+}

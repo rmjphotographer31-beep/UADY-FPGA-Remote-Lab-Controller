@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Pi dependencies
+        run: python -m pip install pytest -r raspberry_pi_ai_hat/requirements_pi.txt
+      - name: Compile Python
+        run: python -m compileall -q .
+      - name: Repository validation
+        run: python scripts/validate_repository.py
+      - name: Packaging tests
+        run: pytest -q
+      - name: Classifier policy tests
+        working-directory: raspberry_pi_ai_hat
+        run: python TEST_FPGA_CLASSIFIER_POLICY.py
+      - name: v5 release validation
+        working-directory: raspberry_pi_ai_hat
+        run: python VALIDATE_V5.py

@@ -1,0 +1,250 @@
+{
+  "schema_version": 3,
+  "description": "Operational JTAG/GPIO profiles merged with project- and Terasic-manual-grounded AI identity evidence. Exact QSF device identity is authoritative; QSF-only template targets are not active Verilog evidence.",
+  "profiles": [
+    {
+      "profile_id": "de1_soc",
+      "display_name": "DE1-SoC",
+      "enabled": true,
+      "quartus_family": "standard",
+      "cable_patterns": [
+        "DE-SoC",
+        "DE1",
+        "DE1-SoC",
+        "USB-Blaster",
+        "USB-Blaster [USB-0]"
+      ],
+      "device_patterns": [
+        "5CSEMA5.*"
+      ],
+      "default_device_index": "2",
+      "features": [
+        "switches",
+        "leds",
+        "hex",
+        "gpio",
+        "keys",
+        "simple_io",
+        "counter",
+        "basic_logic"
+      ],
+      "gpio": {
+        "power_relay_pin": 17,
+        "reset_pin": 27,
+        "status_pin": 22,
+        "busy_led_pin": 5,
+        "ready_led_pin": 6,
+        "active_high": true
+      },
+      "ai_selection_guidance": {
+        "family_names": [
+          "Cyclone V",
+          "Cyclone V SoC"
+        ],
+        "device_prefixes": [
+          "5CSEMA5"
+        ],
+        "distinctive_signals": [
+          "LEDR",
+          "HEX0",
+          "HEX1",
+          "HEX2",
+          "HEX3",
+          "HEX4",
+          "HEX5",
+          "CLOCK_50",
+          "DRAM",
+          "HPS"
+        ]
+      },
+      "authoritative_devices": [
+        "5CSEMA5F31C6",
+        "5CSEMA5F31C6N"
+      ],
+      "authoritative_families": [
+        "Cyclone V",
+        "Cyclone V SoC"
+      ],
+      "board_name_aliases": [
+        "DE1-SoC Board",
+        "DE1-SoC",
+        "Terasic DE1-SoC"
+      ],
+      "manual_verified_signals": {
+        "exact": [
+          "LEDR",
+          "HEX0",
+          "HEX1",
+          "HEX2",
+          "HEX3",
+          "HEX4",
+          "HEX5",
+          "CLOCK_50",
+          "CLOCK2_50",
+          "CLOCK3_50",
+          "CLOCK4_50"
+        ],
+        "prefixes": [
+          "HPS_",
+          "DRAM_",
+          "VGA_",
+          "AUD_",
+          "TD_",
+          "IRDA_",
+          "ADC_",
+          "PS2_"
+        ],
+        "width_patterns": {
+          "SW": 10,
+          "KEY": 4,
+          "LEDR": 10,
+          "HEX0": 7,
+          "HEX1": 7,
+          "HEX2": 7,
+          "HEX3": 7,
+          "HEX4": 7,
+          "HEX5": 7,
+          "GPIO_0": 36,
+          "GPIO_1": 36
+        }
+      },
+      "classification_notes": [
+        "The supplied DE1-SoC QSF files are often complete board templates.",
+        "QSF-only HPS, VGA, audio, DRAM, USB, and other assignments are not active design evidence unless also present in the Verilog top-level ports.",
+        "The manual names the packaged device 5CSEMA5F31C6N; supplied Quartus QSF files use 5CSEMA5F31C6."
+      ]
+    },
+    {
+      "profile_id": "de10_agilex",
+      "display_name": "DE10-Agilex",
+      "enabled": true,
+      "quartus_family": "pro",
+      "cable_patterns": [
+        "DE10",
+        "DE-10",
+        "DE10-Agilex",
+        "Agilex",
+        "USB-BlasterII",
+        "USB-BlasterII [USB-2]"
+      ],
+      "device_patterns": [
+        "AGFB014.*"
+      ],
+      "default_device_index": "1",
+      "features": [
+        "pcie",
+        "ddr4",
+        "ddr",
+        "qsfp",
+        "high_speed",
+        "transceivers",
+        "advanced",
+        "large_logic",
+        "memory",
+        "de10_user_io",
+        "de10_buttons",
+        "de10_switches",
+        "de10_leds",
+        "de10_gpio",
+        "agilex_clocks",
+        "si5397",
+        "info_spi"
+      ],
+      "gpio": {
+        "power_relay_pin": 16,
+        "reset_pin": 20,
+        "status_pin": 21,
+        "busy_led_pin": 26,
+        "ready_led_pin": 19,
+        "active_high": true
+      },
+      "ai_selection_guidance": {
+        "family_names": [
+          "Agilex",
+          "Agilex 7",
+          "Agilex F-Series"
+        ],
+        "device_prefixes": [
+          "AGFB014"
+        ],
+        "distinctive_signals": [
+          "LED_BRACKET",
+          "SI5397",
+          "SI5340",
+          "QSFP",
+          "PCIE",
+          "DDRA",
+          "DDRB",
+          "DDRC",
+          "DDRD",
+          "EXP_EN"
+        ]
+      },
+      "authoritative_devices": [
+        "AGFB014R24B2E2V",
+        "AGFB014R24B1E1V"
+      ],
+      "authoritative_families": [
+        "Agilex 7",
+        "Intel Agilex 7"
+      ],
+      "board_name_aliases": [
+        "DE10-Agilex",
+        "DE10-Agilex Board",
+        "Terasic DE10-Agilex"
+      ],
+      "manual_verified_signals": {
+        "exact": [
+          "SW0",
+          "SW1",
+          "BUTTON0",
+          "BUTTON1",
+          "LED_BRACKET",
+          "GPIO_P0",
+          "GPIO_P1",
+          "GPIO_P2",
+          "GPIO_P3",
+          "GPIO_CLK0",
+          "GPIO_CLK1",
+          "CLK_50_B3A",
+          "CLK_50_B3C",
+          "CLK_100_B2A_p",
+          "OSC_CLK_1",
+          "UFL_CLKIN"
+        ],
+        "prefixes": [
+          "SI5397A_",
+          "QSFPDDA_",
+          "QSFPDDB_",
+          "DDR4A_",
+          "DDR4B_",
+          "DDR4C_",
+          "DDR4D_",
+          "PCIE_"
+        ],
+        "width_patterns": {
+          "LED": 4,
+          "LED_BRACKET": 4
+        }
+      },
+      "weak_or_generic_signals": [
+        "LED",
+        "SW0",
+        "SW1",
+        "BUTTON0",
+        "BUTTON1",
+        "CLK50"
+      ],
+      "classification_notes": [
+        "An empty QSF board-name field is normal in the supplied Agilex projects.",
+        "The exact device is authoritative and must override generic port names.",
+        "The Rev.C manual documents AGFB014R24B2E2V and AGFB014R24B1E1V variants."
+      ]
+    }
+  ],
+  "classification_sources": [
+    "Trainmoudle.zip supplied projects",
+    "DE10_Agilex_User_Manual_revc-3599500.pdf",
+    "de1-soc_user_manual.pdf"
+  ]
+}

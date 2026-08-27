@@ -1,0 +1,5 @@
+Legacy deployment note retained for release history.
+
+The original file contained deployment-specific NetBird/user/path values. Those values were intentionally removed before GitHub packaging.
+
+Use docs/INSTALL_RASPBERRY_PI.md and docs/QUARTUS_SERVER_JTAG.md instead. They use placeholders and the supported UADY_PI.py setup flow.

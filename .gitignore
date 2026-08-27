@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+.env.*
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Security: never commit generated secrets/configs
+config.ini
+classic_servers.ini
+gui_settings.ini
+my_queue_tokens.json
+*.pem
+*_key
+*_private_key
+
+# UADY generated/runtime artifacts
+raspberry_pi_ai_hat/fpga_signal_extractor
+raspberry_pi_ai_hat/upload_spool/
+raspberry_pi_ai_hat/benchmark_results/
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+*.log
+controller_*.log

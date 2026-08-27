@@ -1,0 +1,35 @@
+QUEUE DISAPPEARANCE AND PROGRAMMING FIX — v4.54
+
+Observed:
+- Job cb2a1064bd was accepted, uploaded, and recorded as job_queued.
+- It later recorded job_failed before quartus_pgm ran.
+- /queue then returned recent_jobs: [] even though the terminal history record existed.
+- JTAG discovery was healthy: four DE1-SoC slots and one DE10-Agilex slot were available.
+
+Root causes fixed:
+1. A stale background state save could preserve the job object but overwrite recent_jobs with
+   an older empty list. The GUI therefore removed the row.
+2. The exact-evidence validator compared Qwen evidence labels to raw source text. A correct
+   label such as QSF_DEVICE:5CSEMA5F31C6 could be rejected because raw QSF contains DEVICE
+   5CSEMA5F31C6 without the QSF_DEVICE: prefix.
+
+Fixes:
+- Merge recent terminal job IDs during concurrent-safe saves.
+- Reconstruct recent terminal rows from jobs if the index is missing.
+- Preserve queue lifecycle state during background lock cleanup.
+- Validate AI evidence against extracted JSON plus raw source.
+- Keep Qwen as the only selector.
+- Increase the structured Qwen response budget from 96 to 192 tokens to prevent truncated JSON.
+- Add one Qwen-only repair inference for malformed/inconsistent first output.
+- Show the failed job and exact reason in the GUI.
+
+Validation performed before packaging:
+- All 33 project Python files passed syntax compilation.
+- The C extractor compiled with -Wall -Wextra and no warnings.
+- Sample one-line Verilog/QSF extraction returned normalized ports, widths, device, family, and targets.
+- Evidence validation accepted QSF_DEVICE:5CSEMA5F31C6 and rejected an invented PCIE_RX token.
+- Concurrent-save simulation preserved a failed job and its recent_jobs entry.
+
+Residual safety rule:
+- Quartus programming still runs only after Qwen returns a supported board, safe_to_program=true,
+  confidence >= 85, and literal evidence validation passes. A rejected job remains visible as failed.

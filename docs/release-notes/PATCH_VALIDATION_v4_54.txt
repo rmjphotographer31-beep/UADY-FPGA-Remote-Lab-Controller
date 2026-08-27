@@ -1,0 +1,25 @@
+PATCH VALIDATION — Controller v4.54
+Date: 2026-07-13
+
+Validated locally before packaging:
+PASS  Python syntax: 33 project Python files compiled.
+PASS  config_pi_hat.json: valid JSON; selection_mode=ai_only.
+PASS  Qwen model remains qwen2.5-coder:1.5b.
+PASS  Structured response budget is 192 tokens.
+PASS  One Qwen-only repair pass is enabled.
+PASS  C extractor compiled with gcc -O2 -std=c99 -Wall -Wextra with no warnings.
+PASS  C sample extraction normalized SW, KEY, LEDR, widths, QSF family/device, and targets.
+PASS  C source contains no DE1-SoC/DE10-Agilex labels or board-scoring logic.
+PASS  Exact-evidence gate accepted QSF_DEVICE:5CSEMA5F31C6 and LEDR.
+PASS  Exact-evidence gate rejected invented PCIE_RX evidence.
+PASS  Simulated stale concurrent save preserved failed job cb2a1064bd and recent_jobs visibility.
+
+Not claimed/tested here:
+- No live Raspberry Pi Ollama inference was run in this packaging environment.
+- No live Quartus/JTAG programming command was run in this packaging environment.
+- Actual programming still depends on valid uploaded files, Qwen returning a safe supported board
+  with confidence >= 85, a matching free JTAG slot, and successful Quartus programming.
+
+The safety behavior is intentional:
+- A rejected job remains visible as failed with its exact reason.
+- The controller does not silently choose a board by fallback.

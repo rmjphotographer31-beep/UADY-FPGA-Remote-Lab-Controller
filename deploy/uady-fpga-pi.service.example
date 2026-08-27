@@ -1,0 +1,20 @@
+[Unit]
+Description=UADY FPGA Raspberry Pi Controller
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=<pi-user>
+WorkingDirectory=/home/<pi-user>/raspberry_pi_ai_hat
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 /home/<pi-user>/raspberry_pi_ai_hat/UADY_PI.py --start
+Restart=on-failure
+RestartSec=2
+
+# Optional hardening. Test with your SSH/JTAG requirements before enabling more.
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

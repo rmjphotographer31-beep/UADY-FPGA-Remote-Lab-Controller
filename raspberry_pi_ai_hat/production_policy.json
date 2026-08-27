@@ -1,0 +1,84 @@
+{
+  "schema_version": 2,
+  "dispatcher": {
+    "mode": "event_driven",
+    "admission_basis": "live_free_jtag_slots",
+    "family_reservation": "post_ai_exact_match",
+    "polling_sleep_used_for_job_progress": false,
+    "max_parallel_ai": 1,
+    "programming_parallelism": "detected_free_slots",
+    "test_phase": "asynchronous_board_lease"
+  },
+  "cancellation": {
+    "cancel_active_ai_transport": true,
+    "ignore_late_worker_results": true,
+    "revision_compare_and_swap": true,
+    "release_board_on_cancel": true,
+    "terminate_remote_quartus": true
+  },
+  "inventory": {
+    "refresh_seconds": 5,
+    "last_known_good_on_scan_error": true,
+    "consecutive_missing_scans_before_offline": 3,
+    "unknown_hardware_policy": "quarantine"
+  },
+  "persistence": {
+    "engine": "sqlite_wal",
+    "path": "~/.local/share/uady_fpga_lab/pi/jobs.sqlite3",
+    "terminal_jobs_retained": true,
+    "sse_is_transport_not_storage": true
+  },
+  "ollama": {
+    "keep_alive": "10m",
+    "max_parallel_inference": 1,
+    "release_ai_slot_after_classification": true,
+    "unload_model_after_job": false,
+    "request_timeout_seconds": 120,
+    "minimum_num_predict": 80,
+    "maximum_num_predict": 220,
+    "context_tokens": 4096
+  },
+  "ephemeral_data": {
+    "source_files": "temporary_job_spool_only",
+    "c_evidence": "memory_only",
+    "ai_input_json": "memory_only",
+    "ai_raw_output": "memory_only",
+    "cleanup_on": [
+      "completed",
+      "failed",
+      "cancelled"
+    ],
+    "history_retention": "metadata_only",
+    "orphan_cleanup_ttl_seconds": 3600
+  },
+  "ai_handoff": {
+    "source_of_evidence": "c_extractor_ephemeral",
+    "source_of_board_selection": "qwen_with_authoritative_qsf_identity_guard",
+    "board_profile_guidance": "board_profiles.json",
+    "public_slot_visibility": "after_valid_ai_selection_only",
+    "allowed_target_boards": [
+      "DE1-SoC",
+      "DE10-Agilex",
+      "Ambiguous"
+    ],
+    "qwen_returns_evidence_objects": false,
+    "exact_evidence_regeneration_validation": true,
+    "compact_timing_logs": true,
+    "grounding_policy": "fpga_classifier_policy.py",
+    "prompt_file": "ollama_fpga_classifier_prompt.txt",
+    "recognized_device_identity_is_authoritative": true,
+    "qsf_only_targets_are_active_design_evidence": false,
+    "qwen_copies_observed_identity_fields": true
+  },
+  "benchmarking": {
+    "included_script": "benchmark_classifier.py",
+    "measures": [
+      "c_extractor_latency",
+      "ai_selector_latency",
+      "end_to_end_pipeline_latency",
+      "schema_validity",
+      "classification_accuracy",
+      "safe_match_rate"
+    ]
+  }
+}

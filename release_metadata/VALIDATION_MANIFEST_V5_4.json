@@ -1,0 +1,18 @@
+{
+  "release": "v5.4 Final Polished + Manual-Grounded AI Fix",
+  "validation": [
+    "Python syntax: PASS",
+    "JSON files: PASS",
+    "Manual-grounded stateless Ollama prompt: PASS",
+    "Authoritative DE1-SoC and DE10-Agilex device mappings: PASS",
+    "Hallucinated previous-job evidence correction guard: PASS",
+    "C extractor syntax/build source: PASS",
+    "Benchmark records raw AI target and guarded target: PASS"
+  ],
+  "live_hardware_tested_in_build_environment": false,
+  "notes": [
+    "The package includes Terasic-manual-grounded device, family, board-name, signal, and width evidence.",
+    "Exact recognized QSF identity is enforced after Ollama and cannot be overridden by an invented model explanation.",
+    "Final live Raspberry Pi/Ollama/Quartus/JTAG integration must be verified after deployment."
+  ]
+}

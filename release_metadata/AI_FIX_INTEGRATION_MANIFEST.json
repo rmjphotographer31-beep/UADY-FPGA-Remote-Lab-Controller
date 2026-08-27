@@ -1,0 +1,111 @@
+{
+  "release": "UADY FPGA Controller v5.4 Final Polished + Manual-Grounded AI Fix",
+  "generated_utc": "2026-07-15T07:55:54.751289+00:00",
+  "integration_summary": [
+    "Integrated Terasic-manual-grounded stateless Ollama prompt.",
+    "Added deterministic authoritative QSF device/family/board identity guard.",
+    "Merged operational board profiles with manual and 10-project dataset evidence.",
+    "Updated production classifier and benchmark to apply the guard.",
+    "Benchmark now reports raw AI target separately from guarded target."
+  ],
+  "validated_project_pairs": 10,
+  "validation": {
+    "python_syntax": true,
+    "json_validation": true,
+    "policy_regression_tests": true,
+    "c_extractor_build_test": true,
+    "live_raspberry_pi_ollama_jtag_test": false
+  },
+  "files": [
+    {
+      "path": "AI_MANUAL_GROUNDED_FIX_APPLIED.txt",
+      "size_bytes": 625,
+      "sha256": "6d9b8e43cd582fc0d145a9a2a15ce3df404ba01553aa90aaad806196a6140915"
+    },
+    {
+      "path": "README_V5_4_FINAL_POLISHED.md",
+      "size_bytes": 2826,
+      "sha256": "0e96b60dfb0e91d71ea3e79f78eee8379dd508ec5ff8bfe83ad067c10c00fbd2"
+    },
+    {
+      "path": "VALIDATION_MANIFEST_V5_4.json",
+      "size_bytes": 829,
+      "sha256": "81b360221b93582f134019406dd7012cd3be2b7369a826338ed97365657a37b8"
+    },
+    {
+      "path": "raspberry_pi_ai_hat/pi_ai_hat_controller.py",
+      "size_bytes": 593125,
+      "sha256": "9e9c2066eaa61fe8c48bdb737e670afbc6464194bce7db82ebe0056988371d87"
+    },
+    {
+      "path": "raspberry_pi_ai_hat/benchmark_classifier.py",
+      "size_bytes": 16364,
+      "sha256": "9890b57b08c4f665833759a75aca610d802a9508f9524d1f89dbcb90ff6c6af1"
+    },
+    {
+      "path": "raspberry_pi_ai_hat/config_pi_hat.json",
+      "size_bytes": 11856,
+      "sha256": "25c894938daf1fa8c871427b7229801d6198d6a51241b4bc065dac1e2196f979"
+    },
+    {
+      "path": "raspberry_pi_ai_hat/production_policy.json",
+      "size_bytes": 2613,
+      "sha256": "6d22a76ed5566a90f1da17cf225413e7c8ca42a545b70a60da7afeb19c8b694b"
+    },
+    {
+      "path": "raspberry_pi_ai_hat/board_profiles.json",
+      "size_bytes": 5826,
+      "sha256": "324252c94353d2fb24de7ccae9f944dff7da36f025628cc9e424cc6f71a99093"
+    },
+    {
+      "path": "raspberry_pi_ai_hat/fpga_classifier_policy.py",
+      "size_bytes": 8689,
+      "sha256": "1d07a99caae38ef0453e335b8bccffa7e1ee7e526a32e3d16d481a65044c03b7"
+    },
+    {
+      "path": "raspberry_pi_ai_hat/ollama_fpga_classifier_prompt.txt",
+      "size_bytes": 5355,
+      "sha256": "f7f2cdbbdf9c6f83efa44a7f07675dabd826715d90ac12f84cfe814e92a799d0"
+    },
+    {
+      "path": "raspberry_pi_ai_hat/FPGA_BOARD_SELECTOR_EXTRACTED_PROMPT.txt",
+      "size_bytes": 5355,
+      "sha256": "f7f2cdbbdf9c6f83efa44a7f07675dabd826715d90ac12f84cfe814e92a799d0"
+    },
+    {
+      "path": "raspberry_pi_ai_hat/board_profiles_manual_grounded.json",
+      "size_bytes": 3144,
+      "sha256": "8de2ec9ae13dfe706d0756ced1c11ca99021a7556c06cdd760932d3e37ea1808"
+    },
+    {
+      "path": "raspberry_pi_ai_hat/manual_reference_evidence.json",
+      "size_bytes": 3554,
+      "sha256": "dd11f4473277b5171f9cb487b628675b75c1ad16ec98d8b97e0c895cf6fb1c29"
+    },
+    {
+      "path": "raspberry_pi_ai_hat/dataset_manifest.json",
+      "size_bytes": 9169,
+      "sha256": "5d0461b53e8e16c5e102790114d3c954413b3c9d3c81988647a9691e1135b410"
+    },
+    {
+      "path": "raspberry_pi_ai_hat/TEST_FPGA_CLASSIFIER_POLICY.py",
+      "size_bytes": 4013,
+      "sha256": "a581d966b9e6b07632df7ba32c4d6c6a4b4f9c8a6005b1c133ab74f7639cc584"
+    },
+    {
+      "path": "raspberry_pi_ai_hat/README_AI_MANUAL_GROUNDED_FIX.md",
+      "size_bytes": 3616,
+      "sha256": "d353e7e422ef4183dec8a5f65f8be8b94130063866c9fa2f3d1cc50d484186c0"
+    },
+    {
+      "path": "raspberry_pi_ai_hat/VALIDATE_V5.py",
+      "size_bytes": 1603,
+      "sha256": "bc5a010ef0fe3244500fc723908e675e7db33e82d21706963b062e9f62cbea68"
+    },
+    {
+      "path": "raspberry_pi_ai_hat/DEPLOY_V5_4.txt",
+      "size_bytes": 738,
+      "sha256": "9160d1a20da2592a5dd331f318c111b4af8d6409bf7d0b2b61dc7ce6ebbd2b68"
+    }
+  ]
+}

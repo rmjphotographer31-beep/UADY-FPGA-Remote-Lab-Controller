@@ -1,0 +1,6 @@
+flask
+flask-cors
+paramiko
+gpiozero
+
+# Ollama/Qwen uses local HTTP API via Python stdlib urllib; no pip ollama package required.

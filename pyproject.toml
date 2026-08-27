@@ -1,0 +1,19 @@
+[project]
+name = "uady-fpga-gui"
+version = "5.4.0"
+description = "UADY FPGA Remote Lab Controller v5.4 GUI and Raspberry Pi orchestration"
+requires-python = ">=3.10"
+dependencies = [
+  "paramiko",
+  "requests",
+  "pillow",
+  "ttkthemes",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]

@@ -1,0 +1,15 @@
+UADY FPGA Controller AI fix applied
+
+This application ZIP includes the manual-grounded Ollama classifier package.
+
+Key behavior:
+- Every Ollama request is stateless and based on the current extractor JSON.
+- Exact supported QSF devices are authoritative.
+- Invented previous-job device/family/signal evidence cannot override the current QSF identity.
+- QSF-only template assignments are ignored as active design evidence.
+- The benchmark reports raw Ollama output separately from the guarded production result.
+
+Run on Raspberry Pi:
+  cd ~/raspberry_pi_ai_hat
+  source .venv/bin/activate
+  python3 VALIDATE_V5.py

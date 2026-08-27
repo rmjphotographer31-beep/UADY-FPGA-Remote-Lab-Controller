@@ -1,0 +1,18 @@
+UADY FPGA Controller v4.55 — Confidence Consistency Fix
+
+Fixes:
+- A Qwen result such as DE1-SoC + 98% + safe_to_program=true can no longer remain
+  decision_type=conflict unless evidence explicitly cites DE10-Agilex too.
+- Inconsistent results receive a Qwen repair pass.
+- The repair response is required to be compact.
+- Ollama output budget is at least 320 tokens.
+- Required scalar fields are salvaged when Qwen output is truncated after those
+  fields were already emitted.
+- Board selection remains AI-only. The controller does not choose a board.
+- Real cross-board evidence still fails closed.
+
+Expected valid result:
+  target_board: DE1-SoC
+  confidence_percent: 98
+  safe_to_program: true
+  decision_type: match
